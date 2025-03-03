@@ -2,6 +2,7 @@
     const hbs = require('express-handlebars')
     const path = require('path');
     const app = express();
+    const methodOverride = require('method-override');
     const port = 3000;
    
 
@@ -15,6 +16,8 @@
 
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
+
+    app.use(methodOverride('_method'));
 
     //morgan HTTP logger
     // app.use(morgan('combined'));
