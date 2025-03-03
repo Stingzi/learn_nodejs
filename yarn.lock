@@ -1745,6 +1745,11 @@ mongodb@4.17.2:
     "@aws-sdk/credential-providers" "^3.186.0"
     "@mongodb-js/saslprep" "^1.1.0"
 
+mongoose-delete@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/mongoose-delete/-/mongoose-delete-1.0.2.tgz#9bc38773ee0c811864dc3d3dfff1fe8745a306c7"
+  integrity sha512-W+p9ULLiYHcEz77wQECp6gNnh2NcXf30KRIE3nAyjjsStqmBKJDL5eXTnX0xerGG2gCGx6mI7bO3+ch88tQ+tg==
+
 mongoose-slug-generator@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mongoose-slug-generator/-/mongoose-slug-generator-1.0.4.tgz#a5364f2d4203783472c235c302d35aa1b20d53eb"

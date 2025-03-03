@@ -1,5 +1,5 @@
-    const express = require('express');
-    const hbs = require('express-handlebars')
+   const express = require('express');
+   const { engine } = require('express-handlebars');
     const path = require('path');
     const app = express();
     const methodOverride = require('method-override');
@@ -23,11 +23,12 @@
     // app.use(morgan('combined'));
 
     // Template engine
-    app.engine('hbs', hbs.engine({
+    app.engine('hbs', engine({
         extname: 'hbs',
         defaultLayout: 'main',
-        // layoutsDir: path.join(__dirname, 'resources', 'views', 'layouts'),
-        // partialsDir: path.join(__dirname, 'resources', 'views', 'partials'), // Đường dẫn đến partials
+        helpers: {
+            sum: (a, b) => a + b, // Định nghĩa helper sum
+        }
     }));
     app.set('view engine', 'hbs');
     app.set('views', path.join(__dirname, 'resources', 'views'));
